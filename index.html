@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>City Drive 3D</title><link rel="stylesheet" href="styles.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script></head><body>
+<canvas id="c"></canvas>
+<div id="hud" class="hide"><div><span id="spd">0</span><small> km/h</small><span id="gear">N</span></div><div id="vname"></div><div id="cam"></div><div id="dmg"><i></i></div></div>
+<div id="touch" class="hide">
+<div class="g l"><button data-k="left">&#9664;</button><button data-k="right">&#9654;</button></div>
+<div class="g t"><button data-k="pause">Pause</button><button data-k="cam">Camera</button><button data-k="reset">Reset</button><button data-k="hand">Handbrake</button></div>
+<div class="g r"><button data-k="brk">Brake</button><button data-k="thr">Gas</button></div></div>
+<div id="main" class="screen"><h1>City Drive <span>3D</span></h1><button id="bPlay">Play</button><button id="bVeh">Vehicles</button><button id="bSet">Settings</button><p>W/A/S/D or arrows to drive. Space: handbrake. C: camera. R: reset. Esc: pause. Drag the mouse to look around.</p></div>
+<div id="vehicles" class="screen hide"><h2>Select vehicle</h2><div id="vlist"></div><button id="bVBack">Confirm</button></div>
+<div id="settings" class="screen hide"><h2>Settings</h2><label>Graphics quality<select id="qual"><option value="low">Low (mobile)</option><option value="medium">Medium</option><option value="high">High</option></select></label><label>Chunk distance<select id="chunks"><option value="2">Short</option><option value="3">Medium</option><option value="4">Long</option></select></label><label>Volume<input id="vol" type="range" min="0" max="1" step=".05" value=".7"></label><button id="bSBack">Back</button></div>
+<div id="pause" class="screen hide"><h2>Paused</h2><button id="bRes">Resume</button><button id="bPVeh">Change vehicle</button><button id="bPSet">Settings</button><button id="bQuit">Main menu</button></div>
+<script type="module" src="js/main.js"></script></body></html>
